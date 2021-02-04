@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="title">Log In</h1>
+        <form action="." method="POST">
+            {% csrf_token %}
+
+            {# Django Default form #}
+            {{ form.as_p }}
+
+            <button class="button is_primary" type="submit">Log In</button>
+
+        </form>
+    </div>
+{% endblock %}
